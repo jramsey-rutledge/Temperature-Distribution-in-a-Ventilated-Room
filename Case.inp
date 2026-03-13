@@ -11,4 +11,4 @@
 3.25; xh ( heater center x-direction )
 1.75; yh ( heater center y-direction )
 0.15; R ( heater radius m )
-1; Q ( heater power W )
+1000; Q ( heater power W )
