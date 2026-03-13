@@ -166,6 +166,7 @@ void matrixType::BuildRHS (const meshType& Mesh,const caseType& Case, const volS
 
     double Ah = M_PI * R * R; // area of heater (m^2)
     double f0 = (Q / Ah);  // source strength
+    double dz = 2.5 / Mesh.Nx;
 
     for (int i = 1; i <= Nx; i++){
         for (int j = 1; j <= Ny; j++){
@@ -181,7 +182,7 @@ void matrixType::BuildRHS (const meshType& Mesh,const caseType& Case, const volS
                 f = f0;
             }
 
-            setRHS(i, j, dx*dy*f);
+            setRHS(i, j, dx*dy*dz*f);
         }
     }
 }
